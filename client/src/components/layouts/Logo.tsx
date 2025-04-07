@@ -8,14 +8,14 @@ export const CryptgenLogo: React.FC<{ className?: string }> = ({ className = 'h-
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Outer green circle */}
-      <circle cx="50" cy="50" r="30" stroke="#C4DD69" strokeWidth="6" strokeLinecap="round" strokeDasharray="100 17" strokeDashoffset="0" fill="none" />
+      {/* Outer lime green circle - incomplete to match the logo */}
+      <path d="M75 20 A 40 40 0 1 0 20 75" stroke="#C4E75A" strokeWidth="10" strokeLinecap="round" fill="none" />
       
-      {/* Inner blue half circle */}
-      <path d="M50 35 A 15 15 0 1 1 50 65 A 15 15 0 1 1 50 35" stroke="#818CF8" strokeWidth="5" strokeLinecap="round" strokeDasharray="70 22" strokeDashoffset="0" fill="none" />
+      {/* Middle blue-purple arc - incomplete C shape */}
+      <path d="M67 33 A 25 25 0 0 0 33 67" stroke="#8A70FF" strokeWidth="8" strokeLinecap="round" fill="none" />
       
       {/* Inner purple C */}
-      <path d="M50 40 A 10 10 0 1 1 50 60 A 10 10 0 1 1 50 40" stroke="#6D28D9" strokeWidth="4" strokeLinecap="round" strokeDasharray="40 30" strokeDashoffset="-5" fill="none" />
+      <path d="M60 42 A 15 15 0 0 0 42 60" stroke="#6D28D9" strokeWidth="8" strokeLinecap="round" fill="none" />
     </svg>
   );
 };

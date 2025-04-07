@@ -25,7 +25,7 @@ export default function NavBar() {
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="text-2xl font-bold text-white font-accent flex items-center">
                 <CryptgenLogo className="h-8 w-8 mr-2" />
-                <span className="text-[#60A5FA]">Crypt</span>Gen
+                <span className="text-[#C4E75A]">Crypt</span>Gen
               </Link>
             </div>
           </div>

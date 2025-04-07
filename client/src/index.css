@@ -30,15 +30,15 @@
   }
   
   .btn-accent {
-    @apply bg-[#60A5FA] hover:bg-[#3B82F6] text-white font-medium rounded-md px-4 py-2 transition-colors duration-300;
+    @apply bg-[#C4E75A] hover:bg-[#b3d649] text-gray-800 font-medium rounded-md px-4 py-2 transition-colors duration-300;
   }
   
   .gradient-bg {
-    background: linear-gradient(135deg, hsl(210, 80%, 40%) 0%, hsl(220, 80%, 55%) 100%);
+    background: linear-gradient(135deg, hsl(260, 85%, 45%) 0%, hsl(240, 80%, 65%) 100%);
   }
   
   .section-header {
-    @apply text-2xl font-bold mb-6 text-primary border-b-2 border-blue-200 pb-2;
+    @apply text-2xl font-bold mb-6 text-primary border-b-2 border-purple-200 pb-2;
   }
   
   .nav-link {
@@ -68,7 +68,7 @@
   
   /* Home page components */
   .welcome-section {
-    @apply bg-gradient-to-r from-[#3B82F6]/10 to-[#60A5FA]/10 rounded-lg p-6 mb-8;
+    @apply bg-gradient-to-r from-[#8a70ff]/10 to-[#C4E75A]/10 rounded-lg p-6 mb-8;
   }
   
   .hero-title {
@@ -76,7 +76,7 @@
   }
   
   .hero-subtitle {
-    @apply text-xl text-blue-700/70 mb-6;
+    @apply text-xl text-purple-700/70 mb-6;
   }
   
   .activities-section {

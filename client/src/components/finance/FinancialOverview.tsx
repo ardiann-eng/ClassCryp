@@ -76,7 +76,7 @@ export default function FinancialOverview() {
                 </div>
               </div>
               <div className="mt-4 flex items-center text-sm">
-                <span className="flex items-center text-green-300">
+                <span className="flex items-center text-[#C4E75A]">
                   <TrendingUp className="h-3 w-3 mr-1" /> {percentages.balance}%
                 </span>
                 <span className="ml-2 opacity-80">vs last month</span>
@@ -94,12 +94,12 @@ export default function FinancialOverview() {
                     {formatCurrency(summary?.totalIncome || 0)}
                   </h3>
                 </div>
-                <div className="stat-icon bg-green-100">
-                  <ArrowDownCircle className="text-green-600 h-5 w-5" />
+                <div className="stat-icon bg-[#C4E75A]/20">
+                  <ArrowDownCircle className="text-[#7da824] h-5 w-5" />
                 </div>
               </div>
               <div className="mt-4 flex items-center text-sm">
-                <span className="flex items-center text-green-600">
+                <span className="flex items-center text-[#7da824]">
                   <TrendingUp className="h-3 w-3 mr-1" /> {percentages.income}%
                 </span>
                 <span className="ml-2 text-gray-500">vs last month</span>
@@ -140,14 +140,14 @@ export default function FinancialOverview() {
                     {summary?.duesCollected}/38
                   </h3>
                 </div>
-                <div className="stat-icon bg-[#C4DD69]/30">
+                <div className="stat-icon bg-purple-100">
                   <Users className="text-primary h-5 w-5" />
                 </div>
               </div>
               <div className="mt-4">
                 <div className="w-full bg-gray-200 rounded-full h-2.5">
                   <div 
-                    className="bg-[#C4DD69] h-2.5 rounded-full" 
+                    className="bg-primary h-2.5 rounded-full" 
                     style={{ width: `${percentages.dues}%` }}
                   ></div>
                 </div>

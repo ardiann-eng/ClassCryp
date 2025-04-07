@@ -114,7 +114,7 @@ export default function TransactionForm() {
                     >
                       <FormItem className="flex items-center space-x-2">
                         <FormControl>
-                          <RadioGroupItem value="income" className="text-green-600 border-green-600 focus:ring-green-600" />
+                          <RadioGroupItem value="income" className="text-[#7da824] border-[#7da824] focus:ring-[#7da824]" />
                         </FormControl>
                         <FormLabel className="font-normal text-gray-700">Income</FormLabel>
                       </FormItem>
