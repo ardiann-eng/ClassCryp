@@ -68,7 +68,7 @@
   
   /* Home page components */
   .welcome-section {
-    @apply bg-gradient-to-r from-purple-100/50 to-[#EBF8C7]/50 rounded-lg p-6 mb-8;
+    @apply bg-white rounded-lg p-6 mb-8 shadow-sm border border-[#E9ECEF];
   }
   
   .hero-title {
