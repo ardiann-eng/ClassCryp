@@ -15,18 +15,18 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4 font-accent">CryptGen</h3>
+            <h3 className="text-xl font-bold mb-4 font-accent"><span className="text-blue-400">Crypt</span>Gen</h3>
             <p className="text-gray-400 mb-4">
               Your premier class portal for Computer Science and Cryptography studies.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition">
+              <a href="#" className="text-blue-400 hover:text-blue-300 transition">
                 <FaInstagram size={18} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition">
+              <a href="#" className="text-blue-400 hover:text-blue-300 transition">
                 <FaWhatsapp size={18} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition">
+              <a href="#" className="text-blue-400 hover:text-blue-300 transition">
                 <FaTelegram size={18} />
               </a>
             </div>
@@ -36,23 +36,23 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/">
-                  <a className="text-gray-400 hover:text-white transition">Home</a>
+                <Link href="/" className="text-gray-400 hover:text-white transition">
+                  Home
                 </Link>
               </li>
               <li>
-                <Link href="/announcements">
-                  <a className="text-gray-400 hover:text-white transition">Announcements</a>
+                <Link href="/announcements" className="text-gray-400 hover:text-white transition">
+                  Announcements
                 </Link>
               </li>
               <li>
-                <Link href="/finance">
-                  <a className="text-gray-400 hover:text-white transition">Finance</a>
+                <Link href="/finance" className="text-gray-400 hover:text-white transition">
+                  Finance
                 </Link>
               </li>
               <li>
-                <Link href="/contact">
-                  <a className="text-gray-400 hover:text-white transition">Contact</a>
+                <Link href="/contact" className="text-gray-400 hover:text-white transition">
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -80,7 +80,7 @@ export default function Footer() {
               />
               <Button 
                 type="submit" 
-                className="bg-yellow-500 hover:bg-yellow-600 text-slate-950 rounded-l-none"
+                className="bg-blue-500 hover:bg-blue-600 text-white rounded-l-none"
               >
                 <FaPaperPlane />
               </Button>
