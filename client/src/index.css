@@ -12,7 +12,7 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-white text-foreground;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -22,22 +22,34 @@
 
 @layer components {
   .card {
-    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300;
+    @apply bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300;
   }
   
   .btn-primary {
-    @apply bg-primary hover:bg-primary/90 text-white rounded-md px-4 py-2 transition-colors duration-300;
+    @apply bg-primary hover:bg-primary/80 text-white rounded-md px-4 py-2 transition-colors duration-300;
   }
   
   .btn-accent {
-    @apply bg-[hsl(45,93%,58%)] hover:bg-[hsl(45,93%,52%)] text-black font-medium rounded-md px-4 py-2 transition-colors duration-300;
+    @apply bg-[hsl(45,75%,65%)] hover:bg-[hsl(45,75%,60%)] text-gray-800 font-medium rounded-md px-4 py-2 transition-colors duration-300;
   }
   
   .gradient-bg {
-    background: linear-gradient(135deg, hsl(271, 75%, 55%) 0%, hsl(290, 70%, 50%) 100%);
+    background: linear-gradient(135deg, hsl(266, 58%, 56%) 0%, hsl(266, 58%, 46%) 100%);
   }
   
   .section-header {
     @apply text-2xl font-bold mb-6 text-gray-800 border-b-2 border-primary/20 pb-2;
+  }
+  
+  .nav-link {
+    @apply px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 text-white;
+  }
+  
+  .nav-link:hover {
+    @apply bg-white/20;
+  }
+  
+  .nav-link.active {
+    @apply bg-white/30;
   }
 }
