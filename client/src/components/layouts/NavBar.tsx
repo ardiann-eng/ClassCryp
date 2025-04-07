@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import CryptgenLogo from "./Logo";
 
 export default function NavBar() {
   const [location] = useLocation();
@@ -24,7 +25,8 @@ export default function NavBar() {
             <div className="flex-shrink-0 flex items-center">
               <Link href="/">
                 <a className="text-2xl font-bold text-white font-accent flex items-center">
-                  <span className="text-[hsl(45,75%,65%)]">Crypt</span>Gen
+                  <CryptgenLogo className="h-8 w-8 mr-2" />
+                  <span className="text-[#C4DD69]">Crypt</span>Gen
                 </a>
               </Link>
             </div>

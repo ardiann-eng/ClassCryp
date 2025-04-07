@@ -95,7 +95,7 @@ export default function TransactionForm() {
   };
   
   return (
-    <Card className="card">
+    <Card className="finance-card">
       <CardContent className="p-6">
         <h3 className="text-lg font-semibold text-primary mb-4">Add New Transaction</h3>
         <Form {...form}>
@@ -105,7 +105,7 @@ export default function TransactionForm() {
               name="type"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Transaction Type</FormLabel>
+                  <FormLabel className="text-gray-700">Transaction Type</FormLabel>
                   <FormControl>
                     <RadioGroup
                       onValueChange={field.onChange}
@@ -114,15 +114,15 @@ export default function TransactionForm() {
                     >
                       <FormItem className="flex items-center space-x-2">
                         <FormControl>
-                          <RadioGroupItem value="income" />
+                          <RadioGroupItem value="income" className="text-green-600 border-green-600 focus:ring-green-600" />
                         </FormControl>
-                        <FormLabel className="font-normal">Income</FormLabel>
+                        <FormLabel className="font-normal text-gray-700">Income</FormLabel>
                       </FormItem>
                       <FormItem className="flex items-center space-x-2">
                         <FormControl>
-                          <RadioGroupItem value="expense" />
+                          <RadioGroupItem value="expense" className="text-red-600 border-red-600 focus:ring-red-600" />
                         </FormControl>
-                        <FormLabel className="font-normal">Expense</FormLabel>
+                        <FormLabel className="font-normal text-gray-700">Expense</FormLabel>
                       </FormItem>
                     </RadioGroup>
                   </FormControl>
@@ -135,7 +135,7 @@ export default function TransactionForm() {
               name="amount"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Amount</FormLabel>
+                  <FormLabel className="text-gray-700">Amount</FormLabel>
                   <FormControl>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -144,7 +144,7 @@ export default function TransactionForm() {
                       <Input
                         type="number"
                         placeholder="0"
-                        className="pl-12"
+                        className="pl-12 border-[#DEE2E6] focus-visible:ring-primary"
                         {...field}
                       />
                     </div>
@@ -159,10 +159,11 @@ export default function TransactionForm() {
               name="description"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Description</FormLabel>
+                  <FormLabel className="text-gray-700">Description</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="What's this transaction for?"
+                      className="border-[#DEE2E6] focus-visible:ring-primary"
                       {...field}
                     />
                   </FormControl>
@@ -176,10 +177,10 @@ export default function TransactionForm() {
               name="category"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Category</FormLabel>
+                  <FormLabel className="text-gray-700">Category</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
-                      <SelectTrigger>
+                      <SelectTrigger className="border-[#DEE2E6] focus:ring-primary">
                         <SelectValue placeholder="Select a category" />
                       </SelectTrigger>
                     </FormControl>
@@ -204,10 +205,11 @@ export default function TransactionForm() {
               name="date"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Date</FormLabel>
+                  <FormLabel className="text-gray-700">Date</FormLabel>
                   <FormControl>
                     <Input
                       type="date"
+                      className="border-[#DEE2E6] focus-visible:ring-primary"
                       {...field}
                     />
                   </FormControl>
@@ -221,14 +223,14 @@ export default function TransactionForm() {
                 type="button"
                 variant="outline"
                 onClick={() => form.reset()}
-                className="border-gray-300 hover:bg-gray-50"
+                className="border-[#DEE2E6] hover:bg-gray-50 text-gray-700"
               >
                 Clear
               </Button>
               <Button
                 type="submit"
                 disabled={submitMutation.isPending}
-                className="btn-primary"
+                className="bg-primary hover:bg-primary/90 text-white"
               >
                 {submitMutation.isPending ? "Adding..." : "Add Transaction"}
               </Button>

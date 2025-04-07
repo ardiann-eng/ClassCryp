@@ -30,11 +30,11 @@
   }
   
   .btn-accent {
-    @apply bg-[hsl(45,75%,65%)] hover:bg-[hsl(45,75%,60%)] text-gray-800 font-medium rounded-md px-4 py-2 transition-colors duration-300;
+    @apply bg-[#C4DD69] hover:bg-[#b3cc58] text-gray-800 font-medium rounded-md px-4 py-2 transition-colors duration-300;
   }
   
   .gradient-bg {
-    background: linear-gradient(135deg, hsl(266, 58%, 56%) 0%, hsl(266, 58%, 46%) 100%);
+    background: linear-gradient(135deg, hsl(266, 77%, 50%) 0%, hsl(250, 77%, 50%) 100%);
   }
   
   .section-header {
@@ -51,5 +51,65 @@
   
   .nav-link.active {
     @apply bg-white/30;
+  }
+  
+  /* Member components */
+  .core-member-card {
+    @apply bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF] border border-[#DEE2E6] shadow-sm;
+  }
+  
+  .class-member-card {
+    @apply bg-white border border-[#E9ECEF] shadow-sm;
+  }
+  
+  .member-grid {
+    @apply bg-white p-6 border border-[#E9ECEF];
+  }
+  
+  /* Home page components */
+  .welcome-section {
+    @apply bg-gradient-to-r from-[#818CF8]/10 to-[#C4DD69]/10 rounded-lg p-6 mb-8;
+  }
+  
+  .hero-title {
+    @apply text-4xl md:text-5xl font-bold text-gray-800 mb-4;
+  }
+  
+  .hero-subtitle {
+    @apply text-xl text-gray-600 mb-6;
+  }
+  
+  .activities-section {
+    @apply bg-white rounded-lg p-6 shadow-sm border border-[#E9ECEF];
+  }
+  
+  /* Finance components */
+  .finance-card {
+    @apply bg-white border border-[#E9ECEF] p-6 rounded-lg shadow-sm;
+  }
+
+  .finance-overview {
+    @apply bg-gradient-to-br from-white to-[#F8F9FA] border border-[#DEE2E6] rounded-lg p-6 shadow-sm;
+  }
+  
+  .stat-card {
+    @apply bg-white border border-[#E9ECEF] rounded-lg p-4 shadow-sm flex items-center;
+  }
+  
+  .stat-icon {
+    @apply w-12 h-12 rounded-full flex items-center justify-center mr-4;
+  }
+  
+  .transaction-table-container {
+    @apply bg-white border border-[#E9ECEF] rounded-lg shadow-sm p-6;
+  }
+  
+  /* Announcement components */
+  .announcement-container {
+    @apply bg-white border border-[#E9ECEF] rounded-lg shadow-sm p-6;
+  }
+  
+  .tab-content {
+    @apply bg-white border border-[#E9ECEF] rounded-lg p-6 mt-4;
   }
 }

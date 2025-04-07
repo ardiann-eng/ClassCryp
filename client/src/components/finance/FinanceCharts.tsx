@@ -158,15 +158,15 @@ export default function FinanceCharts() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
       {/* Income vs Expenses Chart */}
-      <Card className="border border-gray-200 shadow-sm">
+      <Card className="finance-card">
         <CardContent className="p-6">
-          <div className="flex justify-between items-center mb-6">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-3">
             <h3 className="text-lg font-semibold text-gray-800">Income vs Expenses</h3>
             <div className="inline-flex rounded-md shadow-sm">
               <Button 
                 variant={timeFrame === 'weekly' ? 'default' : 'outline'}
                 size="sm"
-                className="rounded-l-lg rounded-r-none"
+                className={`rounded-l-lg rounded-r-none ${timeFrame === 'weekly' ? 'bg-primary hover:bg-primary/90' : ''}`}
                 onClick={() => setTimeFrame('weekly')}
               >
                 Weekly
@@ -174,7 +174,7 @@ export default function FinanceCharts() {
               <Button 
                 variant={timeFrame === 'monthly' ? 'default' : 'outline'}
                 size="sm"
-                className="rounded-r-lg rounded-l-none"
+                className={`rounded-r-lg rounded-l-none ${timeFrame === 'monthly' ? 'bg-primary hover:bg-primary/90' : ''}`}
                 onClick={() => setTimeFrame('monthly')}
               >
                 Monthly
@@ -196,14 +196,14 @@ export default function FinanceCharts() {
       </Card>
       
       {/* Expense Categories Chart */}
-      <Card className="border border-gray-200 shadow-sm">
+      <Card className="finance-card">
         <CardContent className="p-6">
-          <div className="flex justify-between items-center mb-6">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-3">
             <h3 className="text-lg font-semibold text-gray-800">Expense Categories</h3>
             <Button 
-              variant="ghost" 
+              variant="outline" 
               size="sm"
-              className="text-primary hover:text-primary/80 text-sm font-medium"
+              className="border-[#DEE2E6] hover:bg-gray-50 text-gray-700 text-sm font-medium"
               onClick={handleExportChart}
             >
               <Download className="h-4 w-4 mr-1" /> Export

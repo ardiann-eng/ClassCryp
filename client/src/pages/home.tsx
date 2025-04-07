@@ -16,22 +16,22 @@ export default function HomePage() {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Hero section */}
-      <div className="gradient-bg rounded-xl shadow-xl mb-12 overflow-hidden">
+      <div className="welcome-section shadow-md mb-12 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 md:pr-8">
-            <h1 className="text-4xl md:text-5xl font-accent font-bold text-white leading-tight">
-              Welcome to <span className="text-[hsl(45,93%,58%)]">CryptGen</span> Class Portal
+            <h1 className="hero-title">
+              Welcome to <span className="text-primary">Crypt<span className="text-[#C4DD69]">Gen</span></span> Class Portal
             </h1>
-            <p className="mt-4 text-xl text-gray-100">
+            <p className="hero-subtitle">
               Your one-stop platform for class information, announcements, and financial tracking.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/announcements">
-                <Button size="lg" className="btn-accent mr-4">
+                <Button size="lg" className="btn-accent">
                   <Bell className="mr-2 h-4 w-4" /> Announcements
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="bg-white hover:bg-gray-100 text-primary font-bold">
+              <Button size="lg" variant="outline" className="bg-white/90 hover:bg-white border-[#DEE2E6] text-gray-800 font-medium">
                 Class Members
               </Button>
             </div>
@@ -80,38 +80,40 @@ export default function HomePage() {
       {/* Class Activities Gallery */}
       <div className="mb-16">
         <h2 className="section-header text-center">Class Activities</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="card overflow-hidden p-0">
-            <img 
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&h=400" 
-              alt="Students in class discussion" 
-              className="w-full h-64 object-cover transition duration-300 transform hover:scale-110"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-1">Class Discussion</h3>
-              <p className="text-sm text-gray-600">Interactive learning sessions</p>
+        <div className="activities-section">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="card overflow-hidden p-0">
+              <img 
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&h=400" 
+                alt="Students in class discussion" 
+                className="w-full h-64 object-cover transition duration-300 transform hover:scale-105"
+              />
+              <div className="p-4">
+                <h3 className="text-lg font-semibold mb-1 text-primary">Class Discussion</h3>
+                <p className="text-sm text-gray-600">Interactive learning sessions</p>
+              </div>
             </div>
-          </div>
-          <div className="card overflow-hidden p-0">
-            <img 
-              src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&h=400" 
-              alt="Group project work" 
-              className="w-full h-64 object-cover transition duration-300 transform hover:scale-110"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-1">Group Projects</h3>
-              <p className="text-sm text-gray-600">Collaborative research assignments</p>
+            <div className="card overflow-hidden p-0">
+              <img 
+                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&h=400" 
+                alt="Group project work" 
+                className="w-full h-64 object-cover transition duration-300 transform hover:scale-105"
+              />
+              <div className="p-4">
+                <h3 className="text-lg font-semibold mb-1 text-primary">Group Projects</h3>
+                <p className="text-sm text-gray-600">Collaborative research assignments</p>
+              </div>
             </div>
-          </div>
-          <div className="card overflow-hidden p-0">
-            <img 
-              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&h=400" 
-              alt="Class presentation" 
-              className="w-full h-64 object-cover transition duration-300 transform hover:scale-110"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-1">Presentations</h3>
-              <p className="text-sm text-gray-600">Sharing knowledge with peers</p>
+            <div className="card overflow-hidden p-0">
+              <img 
+                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&h=400" 
+                alt="Class presentation" 
+                className="w-full h-64 object-cover transition duration-300 transform hover:scale-105"
+              />
+              <div className="p-4">
+                <h3 className="text-lg font-semibold mb-1 text-primary">Presentations</h3>
+                <p className="text-sm text-gray-600">Sharing knowledge with peers</p>
+              </div>
             </div>
           </div>
         </div>

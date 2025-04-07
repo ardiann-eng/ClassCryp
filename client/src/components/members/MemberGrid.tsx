@@ -41,13 +41,13 @@ export default function MemberGrid({ searchPlaceholder = "Search members..." }: 
   }, [searchQuery]);
   
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
-      <div className="flex items-center justify-between mb-6">
-        <div className="relative w-64">
+    <div className="member-grid rounded-xl shadow-lg p-6 mb-8">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4">
+        <div className="relative w-full sm:w-64">
           <Input
             type="text"
             placeholder={searchPlaceholder}
-            className="pl-10"
+            className="pl-10 border-[#DEE2E6] focus-visible:ring-primary"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -56,15 +56,17 @@ export default function MemberGrid({ searchPlaceholder = "Search members..." }: 
         
         <div className="flex space-x-2">
           <Button
-            variant={viewMode === "grid" ? "default" : "secondary"}
+            variant={viewMode === "grid" ? "default" : "outline"}
             size="sm"
+            className={viewMode === "grid" ? "bg-primary hover:bg-primary/90" : ""}
             onClick={() => setViewMode("grid")}
           >
             <Grid className="h-4 w-4 mr-1" /> Grid
           </Button>
           <Button
-            variant={viewMode === "list" ? "default" : "secondary"}
+            variant={viewMode === "list" ? "default" : "outline"}
             size="sm"
+            className={viewMode === "list" ? "bg-primary hover:bg-primary/90" : ""}
             onClick={() => setViewMode("list")}
           >
             <List className="h-4 w-4 mr-1" /> List
@@ -78,7 +80,7 @@ export default function MemberGrid({ searchPlaceholder = "Search members..." }: 
           : "grid-cols-1"} gap-6`}
         >
           {Array.from({ length: 8 }).map((_, index) => (
-            <div key={index} className="bg-gray-50 rounded-lg overflow-hidden shadow">
+            <div key={index} className="card overflow-hidden">
               <Skeleton className="h-40 w-full" />
               <div className="p-4">
                 <Skeleton className="h-4 w-3/4 mb-2" />
@@ -95,7 +97,7 @@ export default function MemberGrid({ searchPlaceholder = "Search members..." }: 
           {displayedMembers.map((member) => (
             <div 
               key={member.id} 
-              className="bg-gray-50 rounded-lg overflow-hidden shadow transition-transform duration-300 hover:shadow-md hover:-translate-y-1"
+              className="card overflow-hidden transition-transform duration-300 hover:shadow-md hover:-translate-y-1"
             >
               <div className="h-40 overflow-hidden">
                 <img 

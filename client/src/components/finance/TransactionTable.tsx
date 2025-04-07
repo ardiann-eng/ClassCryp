@@ -60,24 +60,24 @@ export default function TransactionTable() {
   };
   
   return (
-    <Card className="border border-gray-200 shadow-sm">
-      <CardHeader className="border-b border-gray-200 px-6 py-4 flex items-center justify-between">
+    <Card className="transaction-table-container">
+      <CardHeader className="border-b border-[#E9ECEF] px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <h3 className="text-lg font-semibold text-gray-800">Recent Transactions</h3>
         <div className="flex items-center">
-          <div className="relative w-48 mr-4">
+          <div className="relative w-full sm:w-48 mr-4">
             <Input
               type="text"
               placeholder="Search transactions..."
-              className="pl-8 pr-3 py-1 text-sm"
+              className="pl-8 pr-3 py-1 text-sm border-[#DEE2E6] focus-visible:ring-primary"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
             <Search className="absolute left-3 top-2.5 text-gray-400 h-3 w-3" />
           </div>
           <Button 
-            variant="ghost" 
+            variant="outline" 
             size="sm"
-            className="text-primary hover:text-primary/80 text-sm font-medium"
+            className="border-[#DEE2E6] hover:bg-gray-50 text-gray-700 text-sm font-medium"
           >
             View All
           </Button>
@@ -87,12 +87,12 @@ export default function TransactionTable() {
       <CardContent className="p-0">
         <Table>
           <TableHeader>
-            <TableRow>
-              <TableHead>Date</TableHead>
-              <TableHead>Description</TableHead>
-              <TableHead>Category</TableHead>
-              <TableHead>Amount</TableHead>
-              <TableHead>Status</TableHead>
+            <TableRow className="bg-gray-50">
+              <TableHead className="text-xs font-medium text-gray-600">Date</TableHead>
+              <TableHead className="text-xs font-medium text-gray-600">Description</TableHead>
+              <TableHead className="text-xs font-medium text-gray-600">Category</TableHead>
+              <TableHead className="text-xs font-medium text-gray-600">Amount</TableHead>
+              <TableHead className="text-xs font-medium text-gray-600">Status</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -111,7 +111,7 @@ export default function TransactionTable() {
                 const typeColors = getTransactionColor(transaction.type);
                 
                 return (
-                  <TableRow key={transaction.id} className="hover:bg-gray-50">
+                  <TableRow key={transaction.id} className="hover:bg-gray-50 border-b border-[#E9ECEF]">
                     <TableCell className="text-sm text-gray-500">
                       {formatDate(transaction.date)}
                     </TableCell>
@@ -121,7 +121,7 @@ export default function TransactionTable() {
                     <TableCell className="text-sm text-gray-500">
                       <span className="inline-flex items-center">
                         <div className={`w-2 h-2 ${typeColors.dot} rounded-full mr-2`}></div>
-                        {transaction.type === 'income' ? 'Income' : 'Expense'}
+                        {transaction.category}
                       </span>
                     </TableCell>
                     <TableCell className={`text-sm font-medium ${typeColors.text}`}>
@@ -129,7 +129,7 @@ export default function TransactionTable() {
                       {formatCurrency(Number(transaction.amount))}
                     </TableCell>
                     <TableCell>
-                      <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                      <span className="px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                         {transaction.status}
                       </span>
                     </TableCell>
@@ -147,11 +147,11 @@ export default function TransactionTable() {
         </Table>
       </CardContent>
       
-      <CardFooter className="border-t border-gray-200 px-6 py-4 flex justify-between items-center">
+      <CardFooter className="border-t border-[#E9ECEF] px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
         <Button
-          variant="ghost"
+          variant="outline"
           size="sm"
-          className="text-gray-500 hover:text-gray-700 text-sm font-medium"
+          className="border-[#DEE2E6] hover:bg-gray-50 text-gray-700 text-sm font-medium"
           onClick={goToPreviousPage}
           disabled={currentPage === 1}
         >
@@ -161,9 +161,9 @@ export default function TransactionTable() {
           Showing {((currentPage - 1) * itemsPerPage) + 1}-{Math.min(currentPage * itemsPerPage, totalItems)} of {totalItems} entries
         </div>
         <Button
-          variant="ghost"
+          variant="outline"
           size="sm"
-          className="text-primary hover:text-primary/80 text-sm font-medium"
+          className="border-[#DEE2E6] hover:bg-gray-50 text-gray-700 text-sm font-medium"
           onClick={goToNextPage}
           disabled={currentPage === totalPages}
         >

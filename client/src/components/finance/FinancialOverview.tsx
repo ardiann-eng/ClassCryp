@@ -33,7 +33,7 @@ export default function FinancialOverview() {
   
   // Create loading skeleton card
   const SkeletonCard = () => (
-    <Card className="shadow-md">
+    <Card className="stat-card">
       <CardContent className="p-6">
         <div className="flex justify-between items-start">
           <div>
@@ -51,7 +51,7 @@ export default function FinancialOverview() {
   );
   
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <div className="finance-overview grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
       {isLoading ? (
         <>
           <SkeletonCard />
@@ -62,8 +62,8 @@ export default function FinancialOverview() {
       ) : (
         <>
           {/* Total Balance Card */}
-          <Card className="bg-gradient-to-r from-primary to-primary-foreground shadow-md">
-            <CardContent className="p-6 text-white">
+          <Card className="gradient-bg text-white shadow-md">
+            <CardContent className="p-6">
               <div className="flex justify-between items-start">
                 <div>
                   <p className="text-sm font-medium opacity-80">Total Balance</p>
@@ -71,7 +71,7 @@ export default function FinancialOverview() {
                     {formatCurrency(summary?.totalBalance || 0)}
                   </h3>
                 </div>
-                <div className="bg-white bg-opacity-20 p-3 rounded-lg">
+                <div className="stat-icon bg-white/20">
                   <Wallet className="h-5 w-5" />
                 </div>
               </div>
@@ -85,7 +85,7 @@ export default function FinancialOverview() {
           </Card>
           
           {/* Total Income Card */}
-          <Card className="border border-gray-200 shadow-md">
+          <Card className="stat-card">
             <CardContent className="p-6">
               <div className="flex justify-between items-start">
                 <div>
@@ -94,7 +94,7 @@ export default function FinancialOverview() {
                     {formatCurrency(summary?.totalIncome || 0)}
                   </h3>
                 </div>
-                <div className="bg-green-100 p-3 rounded-lg">
+                <div className="stat-icon bg-green-100">
                   <ArrowDownCircle className="text-green-600 h-5 w-5" />
                 </div>
               </div>
@@ -108,7 +108,7 @@ export default function FinancialOverview() {
           </Card>
           
           {/* Total Expenses Card */}
-          <Card className="border border-gray-200 shadow-md">
+          <Card className="stat-card">
             <CardContent className="p-6">
               <div className="flex justify-between items-start">
                 <div>
@@ -117,7 +117,7 @@ export default function FinancialOverview() {
                     {formatCurrency(summary?.totalExpenses || 0)}
                   </h3>
                 </div>
-                <div className="bg-red-100 p-3 rounded-lg">
+                <div className="stat-icon bg-red-100">
                   <ArrowUpCircle className="text-red-600 h-5 w-5" />
                 </div>
               </div>
@@ -131,7 +131,7 @@ export default function FinancialOverview() {
           </Card>
           
           {/* Dues Collected Card */}
-          <Card className="border border-gray-200 shadow-md">
+          <Card className="stat-card">
             <CardContent className="p-6">
               <div className="flex justify-between items-start">
                 <div>
@@ -140,14 +140,14 @@ export default function FinancialOverview() {
                     {summary?.duesCollected}/38
                   </h3>
                 </div>
-                <div className="bg-yellow-500 p-3 rounded-lg">
-                  <Users className="text-slate-950 h-5 w-5" />
+                <div className="stat-icon bg-[#C4DD69]/30">
+                  <Users className="text-primary h-5 w-5" />
                 </div>
               </div>
               <div className="mt-4">
                 <div className="w-full bg-gray-200 rounded-full h-2.5">
                   <div 
-                    className="bg-yellow-500 h-2.5 rounded-full" 
+                    className="bg-[#C4DD69] h-2.5 rounded-full" 
                     style={{ width: `${percentages.dues}%` }}
                   ></div>
                 </div>
