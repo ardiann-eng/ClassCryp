@@ -1,0 +1,14 @@
+{
+  "name": "cryptgen-class-portal",
+  "version": "1.0.0",
+  "main": "server/index.ts",
+  "scripts": {
+    "dev": "tsx server/index.ts",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build",
+    "build:server": "tsc --project tsconfig.server.json"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

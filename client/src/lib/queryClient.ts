@@ -7,12 +7,26 @@ async function throwIfResNotOk(res: Response) {
   }
 }
 
+// Helper to determine if we're in Vercel production environment
+const isVercelProduction = process.env.NODE_ENV === 'production' && typeof window !== 'undefined';
+
+// Get the base URL for API requests
+export const getApiBaseUrl = () => {
+  if (isVercelProduction) {
+    return window.location.origin;
+  }
+  return '';
+};
+
 export async function apiRequest(
   method: string,
   url: string,
   data?: unknown | undefined,
 ): Promise<Response> {
-  const res = await fetch(url, {
+  // Ensure URL is properly prefixed for Vercel environment
+  const apiUrl = `${getApiBaseUrl()}${url}`;
+  
+  const res = await fetch(apiUrl, {
     method,
     headers: data ? { "Content-Type": "application/json" } : {},
     body: data ? JSON.stringify(data) : undefined,
@@ -29,7 +43,10 @@ export const getQueryFn: <T>(options: {
 }) => QueryFunction<T> =
   ({ on401: unauthorizedBehavior }) =>
   async ({ queryKey }) => {
-    const res = await fetch(queryKey[0] as string, {
+    // Ensure URL is properly prefixed for Vercel environment
+    const apiUrl = `${getApiBaseUrl()}${queryKey[0] as string}`;
+    
+    const res = await fetch(apiUrl, {
       credentials: "include",
     });
 
