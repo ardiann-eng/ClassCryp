@@ -69,8 +69,8 @@ export default function FinanceCharts() {
           {
             label: 'Expenses',
             data: expenseData,
-            backgroundColor: 'hsl(48, 81%, 61%)',
-            borderColor: 'hsl(48, 81%, 61%)',
+            backgroundColor: 'hsl(45, 93%, 58%)',
+            borderColor: 'hsl(45, 93%, 58%)',
             borderWidth: 1
           }
         ]
@@ -96,12 +96,12 @@ export default function FinanceCharts() {
       
       // Generate colors for each category
       const colors = [
-        'hsl(263, 60%, 42%)',
-        'hsl(263, 60%, 52%)',
-        'hsl(263, 60%, 62%)',
-        'hsl(263, 60%, 72%)',
-        'hsl(48, 81%, 61%)',
-        'hsl(48, 81%, 71%)'
+        'hsl(271, 75%, 55%)',
+        'hsl(271, 75%, 65%)',
+        'hsl(271, 75%, 75%)',
+        'hsl(271, 75%, 85%)',
+        'hsl(45, 93%, 58%)',
+        'hsl(45, 93%, 68%)'
       ];
       
       return {

@@ -16,7 +16,7 @@ export default function CoreMemberCard({ member }: CoreMemberCardProps) {
   const displayRole = roleMap[member.role] || member.role;
   
   return (
-    <Card className="overflow-hidden transition duration-300 transform hover:scale-105">
+    <Card className="card overflow-hidden transition duration-300 transform hover:scale-105 hover:shadow-xl">
       <div className="h-64 overflow-hidden">
         <img 
           src={member.imageUrl} 
@@ -25,7 +25,7 @@ export default function CoreMemberCard({ member }: CoreMemberCardProps) {
         />
       </div>
       <CardContent className="p-6 bg-white">
-        <div className="inline-block px-3 py-1 bg-primary text-white text-sm font-semibold rounded-full mb-2">
+        <div className="inline-block px-3 py-1 gradient-bg text-white text-sm font-semibold rounded-full mb-2">
           {displayRole}
         </div>
         <h3 className="text-xl font-bold text-gray-800">{member.name}</h3>

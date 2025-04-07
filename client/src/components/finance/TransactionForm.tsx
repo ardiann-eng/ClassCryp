@@ -95,9 +95,9 @@ export default function TransactionForm() {
   };
   
   return (
-    <Card className="border border-gray-200 shadow-sm">
+    <Card className="card">
       <CardContent className="p-6">
-        <h3 className="text-lg font-semibold text-gray-800 mb-4">Add New Transaction</h3>
+        <h3 className="text-lg font-semibold text-primary mb-4">Add New Transaction</h3>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField
@@ -221,12 +221,14 @@ export default function TransactionForm() {
                 type="button"
                 variant="outline"
                 onClick={() => form.reset()}
+                className="border-gray-300 hover:bg-gray-50"
               >
                 Clear
               </Button>
               <Button
                 type="submit"
                 disabled={submitMutation.isPending}
+                className="btn-primary"
               >
                 {submitMutation.isPending ? "Adding..." : "Add Transaction"}
               </Button>
