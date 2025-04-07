@@ -94,12 +94,12 @@ export default function FinancialOverview() {
                     {formatCurrency(summary?.totalIncome || 0)}
                   </h3>
                 </div>
-                <div className="stat-icon bg-[#B8D63A]/20">
-                  <ArrowDownCircle className="text-[#88A51E] h-5 w-5" />
+                <div className="stat-icon bg-[#FFD500]/20">
+                  <ArrowDownCircle className="text-[#D6B100] h-5 w-5" />
                 </div>
               </div>
               <div className="mt-4 flex items-center text-sm">
-                <span className="flex items-center text-[#88A51E]">
+                <span className="flex items-center text-[#D6B100]">
                   <TrendingUp className="h-3 w-3 mr-1" /> {percentages.income}%
                 </span>
                 <span className="ml-2 text-gray-500">vs last month</span>
