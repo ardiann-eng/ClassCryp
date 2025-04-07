@@ -23,27 +23,25 @@ export default function NavBar() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
-              <Link href="/">
-                <a className="text-2xl font-bold text-white font-accent flex items-center">
-                  <CryptgenLogo className="h-8 w-8 mr-2" />
-                  <span className="text-[#C4DD69]">Crypt</span>Gen
-                </a>
+              <Link href="/" className="text-2xl font-bold text-white font-accent flex items-center">
+                <CryptgenLogo className="h-8 w-8 mr-2" />
+                <span className="text-[#60A5FA]">Crypt</span>Gen
               </Link>
             </div>
           </div>
           
           <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
-            <Link href="/">
-              <a className={cn("nav-link", location === "/" ? "active" : "")}>Home</a>
+            <Link href="/" className={cn("nav-link", location === "/" ? "active" : "")}>
+              Home
             </Link>
-            <Link href="/announcements">
-              <a className={cn("nav-link", location === "/announcements" ? "active" : "")}>Announcements</a>
+            <Link href="/announcements" className={cn("nav-link", location === "/announcements" ? "active" : "")}>
+              Announcements
             </Link>
-            <Link href="/finance">
-              <a className={cn("nav-link", location === "/finance" ? "active" : "")}>Finance</a>
+            <Link href="/finance" className={cn("nav-link", location === "/finance" ? "active" : "")}>
+              Finance
             </Link>
-            <Link href="/contact">
-              <a className={cn("nav-link", location === "/contact" ? "active" : "")}>Contact</a>
+            <Link href="/contact" className={cn("nav-link", location === "/contact" ? "active" : "")}>
+              Contact
             </Link>
           </div>
           
@@ -69,17 +67,17 @@ export default function NavBar() {
       {mobileMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 gradient-bg flex flex-col">
-            <Link href="/">
-              <a onClick={closeMobileMenu} className={cn("nav-link", location === "/" ? "active" : "")}>Home</a>
+            <Link href="/" onClick={closeMobileMenu} className={cn("nav-link", location === "/" ? "active" : "")}>
+              Home
             </Link>
-            <Link href="/announcements">
-              <a onClick={closeMobileMenu} className={cn("nav-link", location === "/announcements" ? "active" : "")}>Announcements</a>
+            <Link href="/announcements" onClick={closeMobileMenu} className={cn("nav-link", location === "/announcements" ? "active" : "")}>
+              Announcements
             </Link>
-            <Link href="/finance">
-              <a onClick={closeMobileMenu} className={cn("nav-link", location === "/finance" ? "active" : "")}>Finance</a>
+            <Link href="/finance" onClick={closeMobileMenu} className={cn("nav-link", location === "/finance" ? "active" : "")}>
+              Finance
             </Link>
-            <Link href="/contact">
-              <a onClick={closeMobileMenu} className={cn("nav-link", location === "/contact" ? "active" : "")}>Contact</a>
+            <Link href="/contact" onClick={closeMobileMenu} className={cn("nav-link", location === "/contact" ? "active" : "")}>
+              Contact
             </Link>
           </div>
         </div>
