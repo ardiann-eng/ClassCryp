@@ -144,7 +144,7 @@ export default function TransactionForm() {
                       <Input
                         type="number"
                         placeholder="0"
-                        className="pl-12 border-[#DEE2E6] focus-visible:ring-primary"
+                        className="pl-12 border-[#DEE2E6] focus-visible:ring-primary formInput"
                         {...field}
                       />
                     </div>
@@ -163,7 +163,7 @@ export default function TransactionForm() {
                   <FormControl>
                     <Input
                       placeholder="What's this transaction for?"
-                      className="border-[#DEE2E6] focus-visible:ring-primary"
+                      className="border-[#DEE2E6] focus-visible:ring-primary formInput"
                       {...field}
                     />
                   </FormControl>
@@ -180,7 +180,7 @@ export default function TransactionForm() {
                   <FormLabel className="text-gray-700">Category</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
-                      <SelectTrigger className="border-[#DEE2E6] focus:ring-primary">
+                      <SelectTrigger className="border-[#DEE2E6] focus:ring-primary formInput">
                         <SelectValue placeholder="Select a category" />
                       </SelectTrigger>
                     </FormControl>
@@ -209,7 +209,7 @@ export default function TransactionForm() {
                   <FormControl>
                     <Input
                       type="date"
-                      className="border-[#DEE2E6] focus-visible:ring-primary"
+                      className="border-[#DEE2E6] focus-visible:ring-primary formInput"
                       {...field}
                     />
                   </FormControl>

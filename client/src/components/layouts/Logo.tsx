@@ -1,5 +1,5 @@
 import React from 'react';
-import cryptgenLogoPath from "../../assets/cryptgen-logo.png";
+import cryptgenLogoPath from "../../assets/379520899_6375696149206329_46838.png";
 
 export const CryptgenLogo: React.FC<{ className?: string, white?: boolean }> = ({ className = 'h-8 w-8', white = false }) => {
   if (white) {

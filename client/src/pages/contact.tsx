@@ -182,8 +182,8 @@ export default function ContactPage() {
           </div>
           
           <div>
-            <Card className="bg-gray-50 shadow-sm">
-              <CardContent className="p-6">
+            <Card className="bg-white shadow-sm">
+              <CardContent className="p-6 formInput">
                 <h3 className="text-xl font-semibold text-gray-800 mb-6">Send us a Message</h3>
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">

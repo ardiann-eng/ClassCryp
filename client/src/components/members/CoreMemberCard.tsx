@@ -25,7 +25,7 @@ export default function CoreMemberCard({ member }: CoreMemberCardProps) {
         />
       </div>
       <CardContent className="p-6">
-        <div className="inline-block px-3 py-1 gradient-bg text-white text-sm font-semibold rounded-full mb-2">
+        <div className="inline-block px-3 py-1 bg-[#5129A6] text-white text-sm font-semibold rounded-full mb-2">
           {displayRole}
         </div>
         <h3 className="text-xl font-bold text-gray-800">{member.name}</h3>

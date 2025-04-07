@@ -19,8 +19,23 @@
     @apply font-accent;
   }
   
-  input, select, textarea {
+  input, select, textarea, .input, button[role="combobox"] {
     @apply bg-white border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary rounded-md;
+  }
+  
+  [data-shadcn-input] input, 
+  .data-[state=open]:bg-white,
+  .bg-background,
+  [cmdk-input],
+  [cmdk-item],
+  [cmdk-list],
+  [data-state="open"] .bg-popover,
+  [data-state="checked"] .bg-background {
+    @apply bg-white !important;
+  }
+  
+  .formInput, form input, .tabsContent {
+    @apply bg-white !important;
   }
 }
 
@@ -34,11 +49,11 @@
   }
   
   .btn-accent {
-    @apply bg-[#FFD500] hover:bg-[#FFC500] text-gray-800 font-medium rounded-md px-4 py-2 transition-colors duration-300;
+    @apply bg-[#C4E75A] hover:bg-[#B3D649] text-gray-800 font-medium rounded-md px-4 py-2 transition-colors duration-300;
   }
   
   .gradient-bg {
-    background: linear-gradient(135deg, hsl(270, 80%, 45%) 0%, hsl(265, 80%, 60%) 100%);
+    background: linear-gradient(135deg, hsl(267, 85%, 40%) 0%, hsl(258, 80%, 55%) 100%);
   }
   
   .section-header {
@@ -72,7 +87,7 @@
   
   /* Home page components */
   .welcome-section {
-    @apply bg-gradient-to-br from-purple-800 via-purple-700 to-purple-600 rounded-lg p-6 mb-8 shadow-md;
+    @apply bg-gradient-to-br from-[#5129A6] via-[#6537C9] to-[#7A50E6] rounded-lg p-6 mb-8 shadow-md;
   }
   
   .hero-title {

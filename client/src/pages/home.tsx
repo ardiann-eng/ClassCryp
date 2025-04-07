@@ -20,7 +20,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 md:pr-8">
             <h1 className="hero-title">
-              Welcome to <span className="text-primary">Crypt<span className="text-[#60A5FA]">Gen</span></span> Class Portal
+              Welcome to <span className="text-white">Crypt<span className="text-[#C4E75A]">Gen</span></span> Class Portal
             </h1>
             <p className="hero-subtitle">
               Your one-stop platform for class information, announcements, and financial tracking.
@@ -31,7 +31,7 @@ export default function HomePage() {
                   <Bell className="mr-2 h-4 w-4" /> Announcements
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="bg-white/90 hover:bg-white border-blue-200 text-blue-700 font-medium">
+              <Button size="lg" variant="outline" className="bg-white/90 hover:bg-white border-primary/20 text-primary font-medium">
                 Class Members
               </Button>
             </div>
