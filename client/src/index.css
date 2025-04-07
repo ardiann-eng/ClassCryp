@@ -72,7 +72,7 @@
   
   /* Home page components */
   .welcome-section {
-    @apply bg-gradient-to-r from-purple-700 to-purple-600 rounded-lg p-6 mb-8 shadow-md;
+    @apply bg-gradient-to-br from-purple-800 via-purple-700 to-purple-600 rounded-lg p-6 mb-8 shadow-md;
   }
   
   .hero-title {
